@@ -6,16 +6,16 @@ Autores:
 Carne:11032
 Seccion: 21
 Fecha:  de 2011
-Nombre del archivo: Aeromoza.java
-Breve descripcion: En esta clase se definen las nuevas aeromozas.
+Nombre del archivo: Piloto.java
+Breve descripcion: En esta clase se definen los nuevos pilotos.
 Utiliza metodos set() y get().
  *******************************************************************************/
-public class Aeromoza {
+public class Piloto {
     //Definicion de atributos
     private String nombre;
     
     //Constructor
-    public Aeromoza(String n){
+    public Piloto(String n){
         nombre = n;
     }
     //Parametros: no aplica
