@@ -24,4 +24,52 @@ public class Aeropuerto {
         coordenadas = c;
         tipo = t;
     }
+    //Parametros: no aplica
+    //Funcinalidad: obtener datos
+    //Valor de retorno: nombre
+    public String getNombre() {
+        return nombre;
+    }
+    //Parametros: variable String nombre
+    //Funcinalidad: almacenar datos
+    //Valor de retorno: no aplica
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    //Parametros: no aplica
+    //Funcinalidad: obtener datos
+    //Valor de retorno: direccion
+    public String getDireccion() {
+        return direccion;
+    }
+    //Parametros: variable String direccion
+    //Funcinalidad: almacenar datos
+    //Valor de retorno: no aplica
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+    //Parametros: no aplica
+    //Funcinalidad: obtener datos
+    //Valor de retorno: coordenadas
+    public String getCoordenadas() {
+        return coordenadas;
+    }
+    //Parametros: variable String coordenadas
+    //Funcinalidad: almacenar datos
+    //Valor de retorno: no aplica
+    public void setCoordenadas(String coordenadas) {
+        this.coordenadas = coordenadas;
+    }
+    //Parametros: no aplica
+    //Funcinalidad: obtener datos
+    //Valor de retorno: tipo
+    public char getTipo() {
+        return tipo;
+    }
+    //Parametros: variable char tipo
+    //Funcinalidad: almacenar datos
+    //Valor de retorno: no aplica
+    public void setTipo(char tipo) {
+        this.tipo = tipo;
+    }
 }
