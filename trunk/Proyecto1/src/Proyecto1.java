@@ -11,10 +11,14 @@ Breve descripcion: Este programa el el Main de nuestro proyecto 1
 Ultima actualizacion: 29 de agosto de 2011
 ******************************************************************************
 */
+//import java.util.ArrayList;
+//import java.util.List;
+        
 public class Proyecto1 
 {
     public static void main(String[] args)
     {
-        
+    //List<String> lista = new ArrayList<String> ();
+    //lista.add("hola");
     }
 }
