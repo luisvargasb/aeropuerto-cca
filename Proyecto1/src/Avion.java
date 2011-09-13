@@ -10,20 +10,21 @@ Nombre del archivo: Avion.java
 Breve descripcion: En esta clase se generan los nuevos aviones.
 Utiliza metodos set() y get().
  *******************************************************************************/
+import java.util.Scanner;
 public class Avion {
     //Definicion de atributos
     private String nombre;
     private char vInternacional;
     private char cPrimera;
-    private char cEjecutiva;
     private char cTurista;
+    private char vNacional;
     
     //Constructor
-    public Avion(String n, char vi, char cp, char ce, char ct){
+    public Avion(String n, char vi,char vn, char cp, char ct){
         nombre = n;
         vInternacional = vi;
+        vNacional = vn;
         cPrimera = cp;
-        cEjecutiva = ce;
         cTurista = ct;
     }
     //Parametros: no aplica
@@ -62,18 +63,7 @@ public class Avion {
     public void setcPrimera(char cPrimera) {
         this.cPrimera = cPrimera;
     }
-    //Parametros: no aplica
-    //Funcinalidad: obtener datos
-    //Valor de retorno: cEjecutiva
-    public char getcEjecutiva() {
-        return cEjecutiva;
-    }
-    //Parametros: variable char cEjecutiva
-    //Funcinalidad: almacenar datos
-    //Valor de retorno: no aplica
-    public void setcEjecutiva(char cEjecutiva) {
-        this.cEjecutiva = cEjecutiva;
-    }
+  
     //Parametros: no aplica
     //Funcinalidad: obtener datos
     //Valor de retorno: cTurista
@@ -85,5 +75,18 @@ public class Avion {
     //Valor de retorno: no aplica
     public void setcTurista(char cTurista) {
         this.cTurista = cTurista;
+    }
+    public void ingresoAvion(){
+        Scanner tecla = new Scanner(System.in);
+        System.out.print("Ingrese el nombre del avion: ");
+        this.nombre = tecla.nextLine(); 
+        System.out.print ("Vuelo internacional: (Si (S) - No (N)) ");
+        this.vInternacional = tecla.next().charAt(0);
+        System.out.print ("Vuelo nacional: (Si (S) - No (N)) ");
+        this.vNacional = tecla.next().charAt(0);
+        System.out.print ("El vuelo cuenta con Primera clase: (Si (S) - No (N)) ");
+        this.cPrimera = tecla.next().charAt(0);
+        System.out.print ("El vuelo cuenta con clase Turista: (Si (S) - No (N)) ");
+        this.cTurista = tecla.next().charAt(0);
     }
 }
