@@ -13,16 +13,14 @@ Utiliza metodos set() y get().
 public class Avion {
     //Definicion de atributos
     private String nombre;
-    private char vNacional;
     private char vInternacional;
     private char cPrimera;
     private char cEjecutiva;
     private char cTurista;
     
     //Constructor
-    public Avion(String n, char vn, char vi, char cp, char ce, char ct){
+    public Avion(String n, char vi, char cp, char ce, char ct){
         nombre = n;
-        vNacional = vn;
         vInternacional = vi;
         cPrimera = cp;
         cEjecutiva = ce;
@@ -39,18 +37,6 @@ public class Avion {
     //Valor de retorno: no aplica
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-    //Parametros: no aplica
-    //Funcinalidad: obtener datos
-    //Valor de retorno: vNacional
-    public char getvNacional() {
-        return vNacional;
-    }
-    //Parametros: variable char vNacional
-    //Funcinalidad: almacenar datos
-    //Valor de retorno: no aplica
-    public void setvNacional(char vNacional) {
-        this.vNacional = vNacional;
     }
     //Parametros: no aplica
     //Funcinalidad: obtener datos
