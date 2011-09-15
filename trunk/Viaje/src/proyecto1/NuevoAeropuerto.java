@@ -31,17 +31,18 @@ public class NuevoAeropuerto extends javax.swing.JPanel implements java.beans.Cu
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
+        nombre = new javax.swing.JTextField();
+        direccion = new javax.swing.JTextField();
+        coordenadas = new javax.swing.JTextField();
+        nacional = new javax.swing.JRadioButton();
+        internacional = new javax.swing.JRadioButton();
+        grabar = new javax.swing.JButton();
 
         jLabel1.setText("AEROPUERTO");
 
@@ -58,22 +59,22 @@ public class NuevoAeropuerto extends javax.swing.JPanel implements java.beans.Cu
 
         jLabel5.setText("TIPO");
 
-        jTextField1.setName("nombre"); // NOI18N
+        nombre.setName("nombre"); // NOI18N
 
-        jTextField2.setName("direccion"); // NOI18N
+        direccion.setName("direccion"); // NOI18N
 
-        jTextField3.setName("coordenadas"); // NOI18N
+        coordenadas.setName("coordenadas"); // NOI18N
 
-        jRadioButton1.setText("NACIONAL");
-        jRadioButton1.setName("nacional"); // NOI18N
+        nacional.setText("NACIONAL");
+        nacional.setName("nacional"); // NOI18N
 
-        jRadioButton2.setText("INTERNACIONAL");
-        jRadioButton2.setName("internacional"); // NOI18N
+        internacional.setText("INTERNACIONAL");
+        internacional.setName("internacional"); // NOI18N
 
-        jButton1.setText("CONTINUAR");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        grabar.setText("Grabar");
+        grabar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                grabarMouseClicked(evt);
             }
         });
 
@@ -94,16 +95,16 @@ public class NuevoAeropuerto extends javax.swing.JPanel implements java.beans.Cu
                     .add(layout.createSequentialGroup()
                         .add(24, 24, 24)
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                            .add(jTextField2)
-                            .add(jTextField1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 282, Short.MAX_VALUE)
-                            .add(jTextField3)
-                            .add(jRadioButton2)
-                            .add(jRadioButton1))))
-                .addContainerGap(38, Short.MAX_VALUE))
+                            .add(direccion)
+                            .add(nombre, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 282, Short.MAX_VALUE)
+                            .add(coordenadas)
+                            .add(internacional)
+                            .add(nacional))))
+                .addContainerGap(147, Short.MAX_VALUE))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(371, Short.MAX_VALUE)
-                .add(jButton1)
-                .add(156, 156, 156))
+                .add(grabar)
+                .add(192, 192, 192))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -113,49 +114,50 @@ public class NuevoAeropuerto extends javax.swing.JPanel implements java.beans.Cu
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabel2)
-                    .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(nombre, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .add(14, 14, 14)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabel3)
-                    .add(jTextField2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(direccion, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jLabel4)
                     .add(layout.createSequentialGroup()
-                        .add(jTextField3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(coordenadas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(18, 18, 18)
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(jLabel5)
-                            .add(jRadioButton1))))
+                            .add(nacional))))
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
                     .add(layout.createSequentialGroup()
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(jRadioButton2)
+                        .add(internacional)
                         .addContainerGap(44, Short.MAX_VALUE))
                     .add(layout.createSequentialGroup()
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jButton1)
+                        .add(grabar)
                         .addContainerGap())))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+private void grabarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_grabarMouseClicked
  // TODO add your handling code here:
-}//GEN-LAST:event_jButton1MouseClicked
+}//GEN-LAST:event_grabarMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.JButton jButton1;
+    private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.JTextField coordenadas;
+    private javax.swing.JTextField direccion;
+    private javax.swing.JButton grabar;
+    private javax.swing.JRadioButton internacional;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JRadioButton nacional;
+    private javax.swing.JTextField nombre;
     // End of variables declaration//GEN-END:variables
 }
