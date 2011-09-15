@@ -10,6 +10,8 @@
  */
 package proyecto1;
 
+import org.jdesktop.application.Action;
+
 /**
  *
  * @author eddy
@@ -58,6 +60,8 @@ public class Ingresos extends javax.swing.JFrame {
         aeromoza.setText(resourceMap.getString("aeromoza.text")); // NOI18N
         aeromoza.setName("aeromoza"); // NOI18N
 
+        javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(proyecto1.Proyecto1App.class).getContext().getActionMap(Ingresos.class, this);
+        aeropuerto.setAction(actionMap.get("nuevoAeropuerto")); // NOI18N
         aeropuerto.setText(resourceMap.getString("aeropuerto.text")); // NOI18N
         aeropuerto.setName("aeropuerto"); // NOI18N
 
@@ -156,6 +160,13 @@ public class Ingresos extends javax.swing.JFrame {
                 new Ingresos().setVisible(true);
             }
         });
+    }
+    
+    NuevoAeropuerto nuevoAeropuerto = new NuevoAeropuerto();
+    
+    @Action
+    public void nuevoAeropuerto() {
+        nuevoAeropuerto.setVisible(true);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton aerolinea;
