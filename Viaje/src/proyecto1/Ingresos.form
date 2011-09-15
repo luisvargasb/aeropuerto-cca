@@ -1,0 +1,136 @@
+<?xml version="1.1" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="title" type="java.lang.String" resourceKey="Form.title"/>
+    <Property name="name" type="java.lang.String" value="Form" noResource="true"/>
+    <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[300, 350]"/>
+    </Property>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="2"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="2"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="pAdministrativo" alignment="1" max="32767" attributes="1"/>
+                          <Component id="aerolinea" alignment="1" max="32767" attributes="1"/>
+                          <Component id="aeromoza" alignment="1" max="32767" attributes="1"/>
+                          <Component id="aeropuerto" alignment="1" max="32767" attributes="1"/>
+                          <Component id="avion" alignment="1" max="32767" attributes="1"/>
+                          <Component id="pasajero" alignment="1" max="32767" attributes="1"/>
+                          <Component id="piloto" alignment="1" max="32767" attributes="1"/>
+                          <Component id="vuelo" alignment="1" max="32767" attributes="1"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="52" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <Component id="pAdministrativo" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="aerolinea" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="aeromoza" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="aeropuerto" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="avion" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="pasajero" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="piloto" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="vuelo" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="30" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" resourceKey="jLabel1.font"/>
+        <Property name="text" type="java.lang.String" resourceKey="jLabel1.text"/>
+        <Property name="name" type="java.lang.String" value="jLabel1" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="pAdministrativo">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="pAdministrativo.text"/>
+        <Property name="name" type="java.lang.String" value="pAdministrativo" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="aerolinea">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="aerolinea.text"/>
+        <Property name="name" type="java.lang.String" value="aerolinea" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="aeromoza">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="aeromoza.text"/>
+        <Property name="name" type="java.lang.String" value="aeromoza" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="aeropuerto">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="aeropuerto.text"/>
+        <Property name="name" type="java.lang.String" value="aeropuerto" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="avion">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="avion.text"/>
+        <Property name="name" type="java.lang.String" value="avion" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="pasajero">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="pasajero.text"/>
+        <Property name="name" type="java.lang.String" value="pasajero" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="piloto">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="piloto.text"/>
+        <Property name="name" type="java.lang.String" value="piloto" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="vuelo">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="vuelo.text"/>
+        <Property name="name" type="java.lang.String" value="vuelo" noResource="true"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>

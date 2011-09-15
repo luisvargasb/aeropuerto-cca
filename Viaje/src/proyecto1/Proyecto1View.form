@@ -132,6 +132,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="vBoletos">
           <Properties>
+            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+              <action class="proyecto1.Proyecto1View" id="venderBoletos" methodName="venderBoletos"/>
+            </Property>
             <Property name="text" type="java.lang.String" resourceKey="vBoletos.text"/>
             <Property name="toolTipText" type="java.lang.String" resourceKey="vBoletos.toolTipText"/>
             <Property name="name" type="java.lang.String" value="vBoletos" noResource="true"/>
@@ -139,6 +142,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="ingresos">
           <Properties>
+            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+              <action class="proyecto1.Proyecto1View" id="abrirIngresos" methodName="abrirIngresos"/>
+            </Property>
             <Property name="text" type="java.lang.String" resourceKey="ingresos.text"/>
             <Property name="toolTipText" type="java.lang.String" resourceKey="ingresos.toolTipText"/>
             <Property name="name" type="java.lang.String" value="ingresos" noResource="true"/>
@@ -146,6 +152,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="consultas">
           <Properties>
+            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+              <action class="proyecto1.Proyecto1View" id="abrirConsultas" methodName="abrirConsultas"/>
+            </Property>
             <Property name="text" type="java.lang.String" resourceKey="consultas.text"/>
             <Property name="toolTipText" type="java.lang.String" resourceKey="consultas.toolTipText"/>
             <Property name="name" type="java.lang.String" value="consultas" noResource="true"/>
@@ -187,6 +196,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="cancelaciones">
           <Properties>
+            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+              <action class="proyecto1.Proyecto1View" id="abrirCancelaciones" methodName="abrirCancelaciones"/>
+            </Property>
             <Property name="text" type="java.lang.String" resourceKey="cancelaciones.text"/>
             <Property name="toolTipText" type="java.lang.String" resourceKey="cancelaciones.toolTipText"/>
             <Property name="name" type="java.lang.String" value="cancelaciones" noResource="true"/>

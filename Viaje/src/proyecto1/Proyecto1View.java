@@ -142,14 +142,18 @@ public class Proyecto1View extends FrameView {
         jLabel2.setText(resourceMap.getString("jLabel2.text")); // NOI18N
         jLabel2.setName("jLabel2"); // NOI18N
 
+        javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(proyecto1.Proyecto1App.class).getContext().getActionMap(Proyecto1View.class, this);
+        vBoletos.setAction(actionMap.get("venderBoletos")); // NOI18N
         vBoletos.setText(resourceMap.getString("vBoletos.text")); // NOI18N
         vBoletos.setToolTipText(resourceMap.getString("vBoletos.toolTipText")); // NOI18N
         vBoletos.setName("vBoletos"); // NOI18N
 
+        ingresos.setAction(actionMap.get("abrirIngresos")); // NOI18N
         ingresos.setText(resourceMap.getString("ingresos.text")); // NOI18N
         ingresos.setToolTipText(resourceMap.getString("ingresos.toolTipText")); // NOI18N
         ingresos.setName("ingresos"); // NOI18N
 
+        consultas.setAction(actionMap.get("abrirConsultas")); // NOI18N
         consultas.setText(resourceMap.getString("consultas.text")); // NOI18N
         consultas.setToolTipText(resourceMap.getString("consultas.toolTipText")); // NOI18N
         consultas.setName("consultas"); // NOI18N
@@ -173,6 +177,7 @@ public class Proyecto1View extends FrameView {
         jLabel7.setText(resourceMap.getString("jLabel7.text")); // NOI18N
         jLabel7.setName("jLabel7"); // NOI18N
 
+        cancelaciones.setAction(actionMap.get("abrirCancelaciones")); // NOI18N
         cancelaciones.setText(resourceMap.getString("cancelaciones.text")); // NOI18N
         cancelaciones.setToolTipText(resourceMap.getString("cancelaciones.toolTipText")); // NOI18N
         cancelaciones.setName("cancelaciones"); // NOI18N
@@ -299,6 +304,32 @@ public class Proyecto1View extends FrameView {
         setComponent(mainPanel);
         setStatusBar(statusPanel);
     }// </editor-fold>//GEN-END:initComponents
+        
+    VentaBoletos vVentaBoletos = new VentaBoletos();
+    Ingresos vIngresos = new Ingresos();
+    Consultas vConsultas = new Consultas();
+    CancelaVuelo vCancelaVuelo = new CancelaVuelo();
+    
+    
+    @Action
+    public void venderBoletos() {
+        vVentaBoletos.setVisible(true);
+    }
+
+    @Action
+    public void abrirIngresos() {
+        vIngresos.setVisible(true);
+    }
+
+    @Action
+    public void abrirConsultas() {
+        vConsultas.setVisible(true);
+    }
+
+    @Action
+    public void abrirCancelaciones() {
+        vCancelaVuelo.setVisible(true);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cancelaciones;
