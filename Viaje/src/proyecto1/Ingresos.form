@@ -104,6 +104,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="aeropuerto">
       <Properties>
+        <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+          <action class="proyecto1.Ingresos" id="nuevoAeropuerto" methodName="nuevoAeropuerto"/>
+        </Property>
         <Property name="text" type="java.lang.String" resourceKey="aeropuerto.text"/>
         <Property name="name" type="java.lang.String" value="aeropuerto" noResource="true"/>
       </Properties>
