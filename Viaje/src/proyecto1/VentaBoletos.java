@@ -192,13 +192,14 @@ public void llenarAsiento(String i){
         });
     }
 
-    @Action
+    /*@Action
     public void limpiarCampos() {
         this.nombre.setText("");
         this.asiento.setSelectedIndex(0);
         this.vuelo.setSelectedIndex(0);
         this.nombre.setCursor(null);
-    }
+    }*/
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox asiento;
     private javax.swing.JLabel jLabel1;
