@@ -12,7 +12,6 @@ package proyecto1;
 
 import org.jdesktop.application.Action;
 import static proyecto1.Proyecto1.aerolinea;
-
 /**
  *
  * @author eddy
@@ -40,6 +39,11 @@ public class NuevaAerolinea extends javax.swing.JFrame {
         borrar = new javax.swing.JButton();
 
         setName("Form"); // NOI18N
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
 
         nombre.setName("nombre"); // NOI18N
 
@@ -107,6 +111,11 @@ public class NuevaAerolinea extends javax.swing.JFrame {
         this.nombre.setText("");        // TODO add your handling code here:
         this.nombre.requestFocus();
     }//GEN-LAST:event_borrarMouseClicked
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        aerolinea.add(new Aerolinea("UA"));
+        aerolinea.add(new Aerolinea("AA"));// TODO add your handling code here:
+    }//GEN-LAST:event_formWindowActivated
 
     /**
      * @param args the command line arguments

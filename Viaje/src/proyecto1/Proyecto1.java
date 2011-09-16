@@ -14,9 +14,10 @@ Ultima actualizacion: 29 de agosto de 2011
 ******************************************************************************
 */
 import java.util.List;
+
        
 public class Proyecto1 
 {
     static List<Aeropuerto> aeropuerto;
-    static List<Aerolinea> aerolinea;
+    static List<Aerolinea> aerolinea;    
 }
