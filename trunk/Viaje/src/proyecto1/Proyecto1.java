@@ -19,5 +19,6 @@ import java.util.List;
 public class Proyecto1 
 {
     static List<Aeropuerto> aeropuerto;
-    static List<Aerolinea> aerolinea;    
+    static List<Aerolinea> aerolinea;
+    static Aerolinea tempaerolinea = new Aerolinea();
 }
