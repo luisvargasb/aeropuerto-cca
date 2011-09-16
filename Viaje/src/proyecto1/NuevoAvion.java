@@ -172,11 +172,8 @@ private void grabarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:even
         if (v == 0)
         {x = 'N' ;}
         else
-        {x = 'I';}
-        
-            
-        
-        avion.add(new Avion(n,v,p,e,t));
+        {x = 'I';}     
+        avion.add(new Avion(n,x,p,e,t));
 }//GEN-LAST:event_grabarMouseClicked
 
 private void nuevoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nuevoMouseClicked
