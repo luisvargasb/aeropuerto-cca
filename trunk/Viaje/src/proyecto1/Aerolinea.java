@@ -21,7 +21,7 @@ public class Aerolinea {
     //Definición de atributos
     private String nombre;
     static List<Boleto> boleto;
-    //static ArrayList<Boleto> boleto = new ArrayList();
+    //static ArrayList<Boleto> boleto = new ArrayList();//Otra forma de hacerlo
     static Boleto tempBoleto = new Boleto();
     
     //Constructor

@@ -12,6 +12,7 @@ package proyecto1;
 
 import static proyecto1.Aerolinea.boleto;
 import static proyecto1.Aerolinea.tempBoleto;
+//import static proyecto1.Proyecto1.aerolinea;
 import org.jdesktop.application.Action;
 
 /**
