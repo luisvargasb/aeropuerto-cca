@@ -15,12 +15,14 @@ Utiliza métodos get() y set().
  *******************************************************************************/
 /*import java.util.ArrayList;*/
 import java.util.List;
+//import java.util.ArrayList;
 
 public class Aerolinea {
     //Definición de atributos
     private String nombre;
-    /*private Boleto boleto[];*/
-    private List<Boleto> boleto;// = new ArrayList<String> ();   
+    static List<Boleto> boleto;
+    //static ArrayList<Boleto> boleto = new ArrayList();
+    static Boleto tempBoleto = new Boleto();
     
     //Constructor
     public Aerolinea(String n){
@@ -39,10 +41,10 @@ public class Aerolinea {
         this.nombre = nombre;
     }
     
-    public void comprarBoleto(){
+    /*public void comprarBoleto(){
         char a = 'P';
         String p = "Eddy";
         String v = "001-tx";
         boleto.add(new Boleto(a,p,v));
-    }
+     }*///Se utilizara para llenar con datos iniciales
 }
