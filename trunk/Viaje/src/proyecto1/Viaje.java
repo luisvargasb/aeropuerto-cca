@@ -13,13 +13,13 @@ Breve descripcion: Este programa el el Main de nuestro proyecto 1
 Ultima actualizacion: 29 de agosto de 2011
 ******************************************************************************
 */
-import java.util.List;
+//import java.util.List;
 import java.util.ArrayList;
 
        
 public class Viaje 
 {
-    static List<Aeropuerto> aeropuerto;
+    static ArrayList<Aeropuerto> aeropuerto = new ArrayList();
     //static List<Aerolinea> aerolinea;//No funciona utilizando listas
     static ArrayList<Aerolinea> aerolinea = new ArrayList();//ArrayList el sustituto de las listas
 }
