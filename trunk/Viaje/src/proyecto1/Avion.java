@@ -19,14 +19,12 @@ public class Avion {
     private char vInternacional;
     private String cPrimera;
     private String cTurista;
-    private char vNacional;
     private String cEjecutiva;
     
     //Constructor
-    public Avion(String n, char vi,char vn, String cp,String ce, String ct){
+    public Avion(String n, char vi,String cp,String ce, String ct){
         nombre = n;
         vInternacional = vi;
-        vNacional = vn;
         cPrimera = cp;
         cTurista = ct;
         cEjecutiva = ce;
@@ -91,18 +89,5 @@ public class Avion {
     //Valor de retorno: no aplica
     public void setcEjecutiva(String cEjecutiva) {
         this.cEjecutiva = cEjecutiva;
-    }
-    public void ingresoAvion(){
-        Scanner tecla = new Scanner(System.in);
-        System.out.print("Ingrese el nombre del avion: ");
-        this.nombre = tecla.nextLine(); 
-        System.out.print ("Vuelo internacional: (Si (S) - No (N)) ");
-        this.vInternacional = tecla.next().charAt(0);
-        System.out.print ("Vuelo nacional: (Si (S) - No (N)) ");
-        this.vNacional = tecla.next().charAt(0);
-        System.out.print ("El vuelo cuenta con Primera clase: (Si (S) - No (N)) ");
-        this.cPrimera = tecla.next().charAt(0);
-        System.out.print ("El vuelo cuenta con clase Turista: (Si (S) - No (N)) ");
-        this.cTurista = tecla.next().charAt(0);
     }
 }
