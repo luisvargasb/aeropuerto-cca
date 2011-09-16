@@ -11,8 +11,7 @@
 package proyecto1;
 
 import org.jdesktop.application.Action;
-import static proyecto1.Proyecto1.aerolinea;
-import static proyecto1.Proyecto1.tempaerolinea;
+import static proyecto1.Viaje.aerolinea;
 
 /**
  *
@@ -76,18 +75,17 @@ public class NuevaAerolinea extends javax.swing.JFrame {
             .add(layout.createSequentialGroup()
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .add(borrar))
-                    .add(layout.createSequentialGroup()
                         .add(33, 33, 33)
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(jLabel2)
-                            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                                .add(grabar)
-                                .add(nombre, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 210, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
+                            .add(nombre, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 210, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(org.jdesktop.layout.GroupLayout.TRAILING, grabar, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 103, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                     .add(layout.createSequentialGroup()
                         .add(119, 119, 119)
-                        .add(jLabel1)))
+                        .add(jLabel1))
+                    .add(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .add(borrar, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 104, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(40, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -154,11 +152,11 @@ public class NuevaAerolinea extends javax.swing.JFrame {
             }
         });
     }
-
+    Aerolinea tempAerolinea = new Aerolinea();
     @Action
     public void grabarAerolinea() {
-        tempaerolinea.setNombre(this.nombre.getText());
-        aerolinea.add(tempaerolinea);
+        tempAerolinea.setNombre(nombre.getText());
+        aerolinea.add(tempAerolinea);
         this.borrarMouseClicked(null);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
