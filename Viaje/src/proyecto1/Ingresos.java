@@ -54,13 +54,14 @@ public class Ingresos extends javax.swing.JFrame {
         pAdministrativo.setText(resourceMap.getString("pAdministrativo.text")); // NOI18N
         pAdministrativo.setName("pAdministrativo"); // NOI18N
 
+        javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(proyecto1.Proyecto1App.class).getContext().getActionMap(Ingresos.class, this);
+        aerolinea.setAction(actionMap.get("nuevaAerolinea")); // NOI18N
         aerolinea.setText(resourceMap.getString("aerolinea.text")); // NOI18N
         aerolinea.setName("aerolinea"); // NOI18N
 
         aeromoza.setText(resourceMap.getString("aeromoza.text")); // NOI18N
         aeromoza.setName("aeromoza"); // NOI18N
 
-        javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(proyecto1.Proyecto1App.class).getContext().getActionMap(Ingresos.class, this);
         aeropuerto.setAction(actionMap.get("nuevoAeropuerto")); // NOI18N
         aeropuerto.setText(resourceMap.getString("aeropuerto.text")); // NOI18N
         aeropuerto.setName("aeropuerto"); // NOI18N
@@ -163,10 +164,16 @@ public class Ingresos extends javax.swing.JFrame {
     }
     
     NuevoAeropuerto nuevoAeropuerto = new NuevoAeropuerto();
+    NuevaAerolinea nuevaAerolinea = new NuevaAerolinea();
     
     @Action
     public void nuevoAeropuerto() {
         nuevoAeropuerto.setVisible(true);
+    }
+
+    @Action
+    public void nuevaAerolinea() {
+        nuevaAerolinea.setVisible(true);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton aerolinea;
