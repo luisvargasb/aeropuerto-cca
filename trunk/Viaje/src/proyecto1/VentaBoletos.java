@@ -10,6 +10,8 @@
  */
 package proyecto1;
 
+import static proyecto1.Aerolinea.boleto;
+import static proyecto1.Aerolinea.tempBoleto;
 import org.jdesktop.application.Action;
 
 /**
@@ -71,10 +73,11 @@ public class VentaBoletos extends javax.swing.JFrame {
 
         asiento.setName("asiento"); // NOI18N
 
+        javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(proyecto1.Proyecto1App.class).getContext().getActionMap(VentaBoletos.class, this);
+        vender.setAction(actionMap.get("reaizarVenta")); // NOI18N
         vender.setText(resourceMap.getString("vender.text")); // NOI18N
         vender.setName("vender"); // NOI18N
 
-        javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(proyecto1.Proyecto1App.class).getContext().getActionMap(VentaBoletos.class, this);
         nuevo.setAction(actionMap.get("lipiarCampos")); // NOI18N
         nuevo.setText(resourceMap.getString("nuevo.text")); // NOI18N
         nuevo.setName("nuevo"); // NOI18N
@@ -95,22 +98,21 @@ public class VentaBoletos extends javax.swing.JFrame {
                         .add(jLabel1))
                     .add(layout.createSequentialGroup()
                         .addContainerGap()
-                        .add(jLabel2)))
-                .addContainerGap())
-            .add(layout.createSequentialGroup()
-                .add(33, 33, 33)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                    .add(nombre, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
-                    .add(jLabel3)
-                    .add(jLabel4)
-                    .add(jLabel5)
-                    .add(asiento, 0, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(vuelo, 0, 189, Short.MAX_VALUE)
+                        .add(jLabel2))
                     .add(layout.createSequentialGroup()
-                        .add(vender, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 142, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(18, 18, 18)
-                        .add(nuevo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 141, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(70, Short.MAX_VALUE))
+                        .add(33, 33, 33)
+                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                            .add(nombre, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
+                            .add(jLabel3)
+                            .add(jLabel4)
+                            .add(jLabel5)
+                            .add(asiento, 0, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .add(vuelo, 0, 189, Short.MAX_VALUE)
+                            .add(layout.createSequentialGroup()
+                                .add(vender, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 142, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(18, 18, 18)
+                                .add(nuevo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 141, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -154,6 +156,10 @@ public void llenarVuelo(String i){
 public void llenarAsiento(String i){
     this.asiento.addItem(i);
     this.asiento.setSelectedIndex(-1);
+}
+public void borrarCombos(){
+    this.asiento.removeAllItems();
+    this.vuelo.removeAllItems();
 }//GEN-LAST:event_nuevoMouseClicked
 
     /**
@@ -190,6 +196,20 @@ public void llenarAsiento(String i){
                 new VentaBoletos().setVisible(true);
             }
         });
+    }
+
+    @Action
+    public void reaizarVenta() {
+        tempBoleto.setAsiento(this.asiento.getSelectedItem().toString().charAt(0));
+        tempBoleto.setPasajero(this.nombre.getText());
+        tempBoleto.setVuelo(this.vuelo.getSelectedItem().toString());
+        boleto.add(tempBoleto);
+        //boleto.add(new Boleto(this.asiento.getSelectedItem().toString().charAt(0), this.nombre.getText(), this.vuelo.getSelectedItem().toString()));
+        //System.out.print(boleto);
+        //System.out.print(tempBoleto.getAsiento());
+        //System.out.print(tempBoleto.getPasajero());
+        //System.out.print(tempBoleto.getVuelo());
+        this.nuevoMouseClicked(null);
     }
 
     /*@Action

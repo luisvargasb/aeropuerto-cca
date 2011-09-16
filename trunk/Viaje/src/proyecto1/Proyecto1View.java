@@ -282,6 +282,12 @@ public class Proyecto1View extends FrameView {
     @Action
     public void venderBoletos() {
         vVentaBoletos.setVisible(true);
+        vVentaBoletos.borrarCombos();
+        vVentaBoletos.llenarAsiento("Primera");
+        vVentaBoletos.llenarAsiento("Ejecutiva");
+        vVentaBoletos.llenarAsiento("Turista");
+        vVentaBoletos.llenarVuelo("xxxx");
+        vVentaBoletos.llenarVuelo("yyyyy");
     }
 
     @Action

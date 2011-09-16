@@ -19,10 +19,18 @@ public class Boleto {
     private String vuelo;
     
     //Constructor
+    //Recibe como parámetros los valores que se requieren para inicializar
+    //un boleto (asiento, nombre de pasajero, numero de vuelo).
     public Boleto(char a, String p, String v){
         asiento = a;
         pasajero = p;
         vuelo = v;
+    }
+    //Constructor sin parámetros
+    public Boleto(){
+        asiento = ' ';
+        pasajero = "";
+        vuelo = "";
     }
     //Parametros: no aplica
     //Funcinalidad: obtener datos
