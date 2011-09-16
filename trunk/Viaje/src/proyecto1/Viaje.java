@@ -14,11 +14,12 @@ Ultima actualizacion: 29 de agosto de 2011
 ******************************************************************************
 */
 import java.util.List;
+import java.util.ArrayList;
 
        
-public class Proyecto1 
+public class Viaje 
 {
     static List<Aeropuerto> aeropuerto;
-    static List<Aerolinea> aerolinea;
-    static Aerolinea tempaerolinea = new Aerolinea();
+    //static List<Aerolinea> aerolinea;//No funciona utilizando listas
+    static ArrayList<Aerolinea> aerolinea = new ArrayList();//ArrayList el sustituto de las listas
 }
