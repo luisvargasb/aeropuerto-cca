@@ -12,6 +12,8 @@ package proyecto1;
 
 import org.jdesktop.application.Action;
 import static proyecto1.Proyecto1.aerolinea;
+import static proyecto1.Proyecto1.tempaerolinea;
+
 /**
  *
  * @author eddy
@@ -113,8 +115,8 @@ public class NuevaAerolinea extends javax.swing.JFrame {
     }//GEN-LAST:event_borrarMouseClicked
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-        aerolinea.add(new Aerolinea("UA"));
-        aerolinea.add(new Aerolinea("AA"));// TODO add your handling code here:
+        /*aerolinea.add(new Aerolinea("UA"));
+        aerolinea.add(new Aerolinea("AA"));// TODO add your handling code here:*/
     }//GEN-LAST:event_formWindowActivated
 
     /**
@@ -155,7 +157,8 @@ public class NuevaAerolinea extends javax.swing.JFrame {
 
     @Action
     public void grabarAerolinea() {
-        aerolinea.add(new Aerolinea(this.nombre.getText()));
+        tempaerolinea.setNombre(this.nombre.getText());
+        aerolinea.add(tempaerolinea);
         this.borrarMouseClicked(null);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables

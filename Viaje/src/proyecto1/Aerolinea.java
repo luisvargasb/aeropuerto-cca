@@ -28,6 +28,9 @@ public class Aerolinea {
     public Aerolinea(String n){
         nombre = n;
     }
+    //Constructor vacio
+    public Aerolinea(){
+    }
     //Parametros: no aplica
     //Funcinalidad: obtener datos
     //Valor de retorno: nombre

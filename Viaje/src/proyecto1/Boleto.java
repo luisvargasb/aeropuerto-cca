@@ -26,12 +26,15 @@ public class Boleto {
         pasajero = p;
         vuelo = v;
     }
-    //Constructor sin parámetros
+    public Boleto(){
+        
+    }
+    /*//Constructor sin parámetros
     public Boleto(){
         asiento = ' ';
         pasajero = "";
         vuelo = "";
-    }
+    }*/
     //Parametros: no aplica
     //Funcinalidad: obtener datos
     //Valor de retorno: asiento
