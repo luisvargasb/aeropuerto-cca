@@ -21,6 +21,7 @@ public class Aerolinea {
     //Definición de atributos
     private String nombre;
     static List<Boleto> boleto;
+    static List<Avion>avion;
     //static ArrayList<Boleto> boleto = new ArrayList();//Otra forma de hacerlo
     static Boleto tempBoleto = new Boleto();
     
@@ -50,4 +51,5 @@ public class Aerolinea {
         String v = "001-tx";
         boleto.add(new Boleto(a,p,v));
      }*///Se utilizara para llenar con datos iniciales
+
 }
