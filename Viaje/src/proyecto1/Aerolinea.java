@@ -13,16 +13,13 @@ Breve descripcion: En esta clase se generan todos los elementos que conforman un
 aerolinea, se realiza por medio de listas.
 Utiliza métodos get() y set().
  *******************************************************************************/
-/*import java.util.ArrayList;*/
-import java.util.List;
-//import java.util.ArrayList;
+import java.util.ArrayList;
 
 public class Aerolinea {
     //Definición de atributos
     private String nombre;
-    static List<Boleto> boleto;
-    static List<Avion>avion;
-    //static ArrayList<Boleto> boleto = new ArrayList();//Otra forma de hacerlo
+    static ArrayList<Boleto> boleto = new ArrayList();
+    static ArrayList<Avion> avion = new ArrayList();
     static Boleto tempBoleto = new Boleto();
     
     //Constructor
