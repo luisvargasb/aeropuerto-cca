@@ -10,7 +10,10 @@
  */
 package proyecto1;
 
+import java.awt.GraphicsConfiguration;
 import static proyecto1.Viaje.aerolinea;
+import javax.swing.DefaultListModel;
+
 /**
  *
  * @author eddy
@@ -88,16 +91,20 @@ public class ConsultaAerolinea extends javax.swing.JFrame {
     private void formWindowStateChanged(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowStateChanged
 
     }//GEN-LAST:event_formWindowStateChanged
-
+    
+    
+    DefaultListModel lconsulta = new DefaultListModel();
     
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
          int size = aerolinea.size();
+         lconsulta.removeAllElements();
          for (int i =0; i<size; i++){
-             //lconsulta.add(aerolinea.get(i).getNombre());
-             System.out.println(i);
-             System.out.println(aerolinea.get(i).getNombre());
-         }  
-         //this.consulta.setModel(lconsulta);// TODO add your handling code here:
+             lconsulta.addElement(aerolinea.get(i).getNombre());
+             //System.out.println(i);//Prueba
+             //System.out.println(aerolinea.get(i).getNombre());//Prueba
+         }
+         this.consulta.removeAll();
+         this.consulta.setModel(lconsulta);//this.consulta.setModel(lconsulta);// TODO add your handling code here:
     }//GEN-LAST:event_formWindowActivated
 
     /**
