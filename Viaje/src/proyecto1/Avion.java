@@ -12,7 +12,7 @@ Nombre del archivo: Avion.java
 Breve descripcion: En esta clase se generan los nuevos aviones.
 Utiliza metodos set() y get().
  *******************************************************************************/
-import java.util.Scanner;
+//import java.util.Scanner;
 public class Avion {
     //Definicion de atributos
     private String nombre;
@@ -28,6 +28,9 @@ public class Avion {
         cPrimera = cp;
         cTurista = ct;
         cEjecutiva = ce;
+    }
+    //Constructor vacio
+    public Avion(){     
     }
     //Parametros: no aplica
     //Funcinalidad: obtener datos
