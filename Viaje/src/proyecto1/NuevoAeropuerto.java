@@ -20,8 +20,7 @@ public class NuevoAeropuerto extends javax.swing.JFrame {
     //<editor-fold defaultstate="collapsed" desc="comment">
     Aeropuerto aero = new Aeropuerto();
     Viaje puerto = new Viaje();
-    //</editor-fold>
-    private List<Aeropuerto> aeropuerto;// = new ArrayList<String> ();
+
     
     /** Creates new form NuevoAeropuerto */
     public NuevoAeropuerto() {
