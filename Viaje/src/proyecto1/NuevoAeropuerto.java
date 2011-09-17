@@ -17,17 +17,15 @@ import javax.swing.JComboBox;
  * @author eddy
  */
 public class NuevoAeropuerto extends javax.swing.JFrame {
+    //<editor-fold defaultstate="collapsed" desc="comment">
+    Aeropuerto aero = new Aeropuerto();
+    Viaje puerto = new Viaje();
+    //</editor-fold>
     private List<Aeropuerto> aeropuerto;// = new ArrayList<String> ();
     
     /** Creates new form NuevoAeropuerto */
     public NuevoAeropuerto() {
-        initComponents();
-    }
-      public void agregarAeropuerto(){
-
-    }
-    
-
+        initComponents();}
     /** This method is called from within the constructor to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is
@@ -164,16 +162,20 @@ public class NuevoAeropuerto extends javax.swing.JFrame {
 private void grabarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_grabarMouseClicked
 // TODO add your handling code here:
         String n = this.nombre.getText();
+        aero.setNombre(n);
         String d = this.direccion.getText();
+        aero.setDireccion(d);
         String c = this.coordenadas.getText();
+        aero.setCoordenadas(c);
         int i = this.tipo.getSelectedIndex();
         char x;
         if (i == 0)
         {x = 'N' ;}
         else
         {x = 'I';}  
-        aeropuerto.add(new Aeropuerto(n,d,c,x));
-        System.out.print(n+d+c+x);
+        aero.setTipo(x);
+        boolean add = Viaje.aeropuerto.add(new Aeropuerto(aero.getNombre(),aero.getDireccion(),aero.getCoordenadas(),aero.getTipo()));
+        
 }//GEN-LAST:event_grabarMouseClicked
 
 private void nuevoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nuevoMouseClicked
