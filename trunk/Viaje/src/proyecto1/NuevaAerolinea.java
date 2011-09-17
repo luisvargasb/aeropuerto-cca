@@ -153,9 +153,10 @@ public class NuevaAerolinea extends javax.swing.JFrame {
             }
         });
     }
-    Aerolinea tempAerolinea = new Aerolinea();
+    
     @Action
     public void grabarAerolinea() {
+        Aerolinea tempAerolinea = new Aerolinea();
         tempAerolinea.setNombre(nombre.getText());
         //System.out.println(tempAerolinea.getNombre());//Pruebas
         aerolinea.add(tempAerolinea);
