@@ -157,7 +157,9 @@ public class NuevaAerolinea extends javax.swing.JFrame {
     @Action
     public void grabarAerolinea() {
         tempAerolinea.setNombre(nombre.getText());
+        System.out.println(tempAerolinea.getNombre());//Pruebas
         aerolinea.add(tempAerolinea);
+        System.out.println(aerolinea.get(0).getNombre());//Pruebas
         this.borrarMouseClicked(null);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
