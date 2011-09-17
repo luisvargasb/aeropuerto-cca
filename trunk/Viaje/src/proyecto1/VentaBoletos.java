@@ -10,10 +10,9 @@
  */
 package proyecto1;
 
-import static proyecto1.Aerolinea.boleto;
-import static proyecto1.Aerolinea.tempBoleto;
-//import static proyecto1.Proyecto1.aerolinea;
 import org.jdesktop.application.Action;
+import static proyecto1.Viaje.aerolinea;
+//import static proyecto1.Aerolinea.boleto;
 
 /**
  *
@@ -46,12 +45,17 @@ public class VentaBoletos extends javax.swing.JFrame {
         vender = new javax.swing.JButton();
         nuevo = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        aerolinea = new javax.swing.JComboBox();
+        cAerolinea = new javax.swing.JComboBox();
 
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(proyecto1.Proyecto1App.class).getContext().getResourceMap(VentaBoletos.class);
         setTitle(resourceMap.getString("Form.title")); // NOI18N
         setName("Form"); // NOI18N
         setSize(new java.awt.Dimension(411, 316));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
 
         jLabel1.setFont(resourceMap.getFont("jLabel1.font")); // NOI18N
         jLabel1.setText(resourceMap.getString("jLabel1.text")); // NOI18N
@@ -94,7 +98,7 @@ public class VentaBoletos extends javax.swing.JFrame {
         jLabel6.setText(resourceMap.getString("jLabel6.text")); // NOI18N
         jLabel6.setName("jLabel6"); // NOI18N
 
-        aerolinea.setName("aerolinea"); // NOI18N
+        cAerolinea.setName("cAerolinea"); // NOI18N
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -121,7 +125,7 @@ public class VentaBoletos extends javax.swing.JFrame {
                             .add(asiento, 0, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .add(vuelo, 0, 189, Short.MAX_VALUE)
                             .add(jLabel4)
-                            .add(aerolinea, 0, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .add(cAerolinea, 0, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .add(nombre, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE))))
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -139,7 +143,7 @@ public class VentaBoletos extends javax.swing.JFrame {
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jLabel6)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(aerolinea, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(cAerolinea, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(10, 10, 10)
                 .add(jLabel4)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
@@ -162,6 +166,7 @@ private void nuevoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event
         this.nombre.setText("");
         this.asiento.setSelectedIndex(-1);
         this.vuelo.setSelectedIndex(-1);
+        this.cAerolinea.setSelectedIndex(-1);
         this.nombre.requestFocus();
 }
 public void llenarVuelo(String i){
@@ -176,6 +181,14 @@ public void borrarCombos(){
     this.asiento.removeAllItems();
     this.vuelo.removeAllItems();
 }//GEN-LAST:event_nuevoMouseClicked
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        int size = aerolinea.size();
+        for (int i = 0; i<size; i++){
+            this.cAerolinea.addItem(aerolinea.get(i).getNombre());
+        }
+        cAerolinea.setSelectedIndex(-1);
+    }//GEN-LAST:event_formWindowActivated
 
     /**
      * @param args the command line arguments
@@ -215,15 +228,14 @@ public void borrarCombos(){
 
     @Action
     public void reaizarVenta() {
+        Boleto tempBoleto = new Boleto();
         tempBoleto.setAsiento(this.asiento.getSelectedItem().toString().charAt(0));
         tempBoleto.setPasajero(this.nombre.getText());
         tempBoleto.setVuelo(this.vuelo.getSelectedItem().toString());
-        boleto.add(tempBoleto);
-        //boleto.add(new Boleto(this.asiento.getSelectedItem().toString().charAt(0), this.nombre.getText(), this.vuelo.getSelectedItem().toString()));
-        //System.out.print(boleto);
-        //System.out.print(tempBoleto.getAsiento());
-        //System.out.print(tempBoleto.getPasajero());
-        //System.out.print(tempBoleto.getVuelo());
+        aerolinea.get(cAerolinea.getSelectedIndex()).boleto.add(tempBoleto);
+        //System.out.print(aerolinea.get(cAerolinea.getSelectedIndex()).boleto.get(0).getAsiento());//Pruebas
+        //System.out.print(aerolinea.get(cAerolinea.getSelectedIndex()).boleto.get(0).getPasajero());//Pruebas
+        //System.out.print(aerolinea.get(cAerolinea.getSelectedIndex()).boleto.get(0).getVuelo());//Pruebas
         this.nuevoMouseClicked(null);
     }
 
@@ -236,8 +248,8 @@ public void borrarCombos(){
     }*/
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox aerolinea;
     private javax.swing.JComboBox asiento;
+    private javax.swing.JComboBox cAerolinea;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
