@@ -174,7 +174,7 @@ private void grabarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:even
         else
         {x = 'I';}  
         aero.setTipo(x);
-        boolean add = Viaje.aeropuerto.add(new Aeropuerto(aero.getNombre(),aero.getDireccion(),aero.getCoordenadas(),aero.getTipo()));
+        Viaje.aeropuerto.add(new Aeropuerto(aero.getNombre(),aero.getDireccion(),aero.getCoordenadas(),aero.getTipo()));
         
 }//GEN-LAST:event_grabarMouseClicked
 
