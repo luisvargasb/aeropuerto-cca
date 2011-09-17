@@ -26,6 +26,9 @@ public class Aeropuerto {
         coordenadas = c;
         tipo = t;
     }
+    public Aeropuerto(){
+        
+    }
     //Parametros: no aplica
     //Funcinalidad: obtener datos
     //Valor de retorno: nombre
