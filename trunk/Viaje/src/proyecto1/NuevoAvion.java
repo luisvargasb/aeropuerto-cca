@@ -10,6 +10,7 @@
  */
 package proyecto1;
 
+import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -17,7 +18,8 @@ import java.util.List;
  * @author odra
  */
 public class NuevoAvion extends javax.swing.JFrame {
- private List<Avion>avion;
+ Avion aviones = new Avion();
+ Aerolinea a = new Aerolinea ();
     /** Creates new form NuevoAvion */
     public NuevoAvion() {
         initComponents();
@@ -164,16 +166,21 @@ public class NuevoAvion extends javax.swing.JFrame {
 private void grabarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_grabarMouseClicked
 // TODO add your handling code here:
         String n = this.nombre.getText();
+        aviones.setNombre(n);
         int v = this.vuelos.getSelectedIndex();
         String p = this.primera.getActionCommand();
+        aviones.setcPrimera(p);
         String e = this.ejecutiva.getActionCommand();
+        aviones.setcEjecutiva(e);
         String t = this.turista.getActionCommand();
+        aviones.setcTurista(t);
         char x;
         if (v == 0)
         {x = 'N' ;}
         else
         {x = 'I';}     
-        avion.add(new Avion(n,x,p,e,t));
+        aviones.setvInternacional(x);
+        Aerolinea.avion.add(new Avion(aviones.getNombre(),aviones.getvInternacional(),aviones.getcPrimera(),aviones.getcEjecutiva(),aviones.getcTurista()));
 }//GEN-LAST:event_grabarMouseClicked
 
 private void nuevoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nuevoMouseClicked
