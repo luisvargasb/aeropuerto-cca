@@ -184,6 +184,7 @@ public void borrarCombos(){
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
         int size = aerolinea.size();
+        this.cAerolinea.removeAllItems();
         for (int i = 0; i<size; i++){
             this.cAerolinea.addItem(aerolinea.get(i).getNombre());
         }
