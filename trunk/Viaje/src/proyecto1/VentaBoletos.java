@@ -233,7 +233,7 @@ public void borrarCombos(){
         tempBoleto.setAsiento(this.asiento.getSelectedItem().toString().charAt(0));
         tempBoleto.setPasajero(this.nombre.getText());
         tempBoleto.setVuelo(this.vuelo.getSelectedItem().toString());
-        aerolinea.get(cAerolinea.getSelectedIndex()).boleto.add(tempBoleto);
+        aerolinea.get(cAerolinea.getSelectedIndex()).agregarBoleto(tempBoleto);
         //System.out.print(aerolinea.get(cAerolinea.getSelectedIndex()).boleto.get(0).getAsiento());//Pruebas
         //System.out.print(aerolinea.get(cAerolinea.getSelectedIndex()).boleto.get(0).getPasajero());//Pruebas
         //System.out.print(aerolinea.get(cAerolinea.getSelectedIndex()).boleto.get(0).getVuelo());//Pruebas

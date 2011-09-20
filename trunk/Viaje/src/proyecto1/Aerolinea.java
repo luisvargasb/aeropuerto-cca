@@ -14,14 +14,18 @@ aerolinea, se realiza por medio de listas.
 Utiliza métodos get() y set().
  *******************************************************************************/
 import java.util.ArrayList;
+import java.util.GregorianCalendar;
+import java.util.Date;
+import java.text.DateFormat;
 
 public class Aerolinea {
     //Definición de atributos
     private String nombre;
     static ArrayList<Boleto> boleto = new ArrayList();
     static ArrayList<Avion> avion = new ArrayList();
-    static Boleto tempBoleto = new Boleto();
+    private static Boleto tempBoleto = new Boleto();
     
+   
     //Constructor
     public Aerolinea(String n){
         nombre = n;
@@ -29,6 +33,7 @@ public class Aerolinea {
     //Constructor vacio
     public Aerolinea(){
     }
+    
     //Parametros: no aplica
     //Funcinalidad: obtener datos
     //Valor de retorno: nombre
@@ -40,6 +45,9 @@ public class Aerolinea {
     //Valor de retorno: no aplica
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+    public static void agregarBoleto(Boleto bol){
+        boleto.add(bol);
     }
     
     /*public void comprarBoleto(){
